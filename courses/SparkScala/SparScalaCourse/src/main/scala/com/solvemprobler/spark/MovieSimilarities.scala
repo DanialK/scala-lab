@@ -1,6 +1,5 @@
 package com.solvemprobler.spark
 
-
 import org.apache.spark._
 import org.apache.log4j._
 import scala.io.Source

@@ -6,7 +6,7 @@ import org.apache.spark._
 import org.apache.spark.SparkContext._
 import org.apache.spark.sql._
 import org.apache.log4j._
-
+import org.apache.spark.sql.functions._
 import scala.io.{Codec, Source}
 
 object PopularMoviesDatasets {
@@ -53,9 +53,15 @@ object PopularMoviesDatasets {
     val lines = spark.sparkContext.textFile("../ml-100k/u.data")
     val moviesDS = lines.map(x => Movie(x.split("\t")(1).toInt)).toDS
 
-//    val moviesSorted = movies.reduceByKey(_+_).sortBy(x => x._2)
-//    val moviesSortedWithName = moviesSorted.map(x => (nameDict.value(x._1), x._2))
-//    val result = moviesSortedWithName.collect()
-//    result.foreach(println)
+    val result = moviesDS.groupBy("movieId").count().orderBy(desc("count")).cache()
+    result.show()
+
+    val top10 = result.take(10)
+
+    for (row <- top10) {
+      println(nameDict.value(row(0).asInstanceOf[Int]) + ": " + row(1))
+    }
+
+    spark.stop()
   }
 }
