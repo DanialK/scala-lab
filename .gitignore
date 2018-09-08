@@ -22,3 +22,8 @@ project/plugins/project/
 *.csv
 *.
 courses/SparkScala/ml-100k/*
+/**/*/h2ologs
+/**/*/metastore_db
+
+/**/*/project/boot/
+/**/*/project/plugins/project/
