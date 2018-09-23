@@ -24,6 +24,6 @@ project/plugins/project/
 courses/SparkScala/ml-100k/*
 /**/*/h2ologs
 /**/*/metastore_db
-
+metastore_db
 /**/*/project/boot/
 /**/*/project/plugins/project/
