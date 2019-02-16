@@ -1,10 +1,7 @@
 package com.solvemprobler.sparkstreaming
 
-import java.util.concurrent.atomic._
-
 import org.apache.spark.streaming.Seconds
 import org.apache.spark.streaming.twitter.TwitterUtils
-
 
 object MostPopularTweet extends SparkSessionWrapper {
   def main(args: Array[String]): Unit = {
