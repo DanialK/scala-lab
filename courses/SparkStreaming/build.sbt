@@ -9,7 +9,8 @@ libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-sql" % "2.2.2" % Provided,
   "org.apache.spark" %% "spark-streaming" % "2.2.2" % Provided,
   "org.apache.bahir" %% "spark-streaming-twitter" % "2.2.2",
-  "org.scalatest" %% "scalatest" % "3.0.5" % "test"
+  "org.scalatest" %% "scalatest" % "3.0.5" % "test",
+  "org.apache.spark" %% "spark-streaming-kafka" % "1.6.3"
 )
 
 assemblyMergeStrategy in assembly := {
