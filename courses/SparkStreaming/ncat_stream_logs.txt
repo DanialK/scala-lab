@@ -1,0 +1,5 @@
+windows
+ncat -kl 9999 < apache_logs.txt
+
+mac/linux
+nc -kl 9999 < apache_logs.txt

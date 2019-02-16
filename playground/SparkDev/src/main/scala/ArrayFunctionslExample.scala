@@ -1,6 +1,6 @@
 import org.apache.spark.sql.functions._
 
-object NullSafeEqualExample extends SparkSessionWrapper {
+object ArrayFunctionslExample extends SparkSessionWrapper {
 
   def main(args: Array[String]): Unit = {
     import spark.implicits._
