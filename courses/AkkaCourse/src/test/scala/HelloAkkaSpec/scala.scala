@@ -1,0 +1,5 @@
+package HelloAkkaSpec
+
+class scala {
+
+}
