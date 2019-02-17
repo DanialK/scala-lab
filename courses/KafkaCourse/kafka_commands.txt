@@ -1,0 +1,2 @@
+# Tutorial 2, consume tweets in console
+bin\windows\kafka-console-consumer.bat --bootstrap-server 127.0.0.1:9092 --topic twitter_tweets
